@@ -26,6 +26,7 @@ export default function Home({ allPostsData }) {
           This site was built with {' '}
           <a href="https://nextjs.org/">NextJS</a>.)
         </p>
+        <p>Site is still under construction as of now!</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
