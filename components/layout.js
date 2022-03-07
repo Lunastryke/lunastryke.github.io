@@ -33,9 +33,8 @@ export default function Layout({ children, home }) {
           <>
             <Link href="/">
               <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
+                <img
+                  src={require('/public/images/profile.jpeg')}
                   className={utilStyles.borderCircle}
                   height={108}
                   width={108}
