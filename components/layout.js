@@ -22,7 +22,7 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <img src={require('/public/images/profile.jpg')}
+            <img src={require('/public/images/profile.jpeg')}
               height={144}
               width={144}
               className={utilStyles.borderCircle}

@@ -8,12 +8,15 @@ module.exports =
       optimizeImagesInDev: true,
       disableStaticImages: true,
       /* config for next-optimized-images */
+      imagesFolder: 'images',
       handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
     }],
     // Global config
     {
       images: {
-        disableStaticImages: true
+        disableStaticImages: true,
+        loader: 'akamai',
+        path: ''
       }
     }
   ]);
