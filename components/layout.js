@@ -1,33 +1,24 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import CustomHead from './customhead'
+import Navbar from './navbar'
+import Footer from './footer'
 
-const name = 'Lim Xuan Hao'
-export const siteTitle = 'Xuan Hao\'s blog'
+const name = 'Xuan Hao'
+export const siteTitle = 'Xuan Hao'
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      <header className={styles.header}>
+    <div>
+      <CustomHead title="Home" desc="Learn how to build a personal website using Next.js" />
+      <Navbar />
+      <header className="flex min-h-screen justify-center items-center">
         {home ? (
           <>
             <img src={require('/public/images/profile.jpeg')}
               height={144}
               width={144}
-              className={utilStyles.borderCircle}
-              alt={name}/>
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+              alt={name} />
+            <h1>{name}</h1>
           </>
         ) : (
           <>
@@ -35,16 +26,15 @@ export default function Layout({ children, home }) {
               <a>
                 <img
                   src={require('/public/images/profile.jpeg')}
-                  className={utilStyles.borderCircle}
                   height={108}
                   width={108}
                   alt={name}
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a>{name}</a>
               </Link>
             </h2>
           </>
@@ -52,12 +42,13 @@ export default function Layout({ children, home }) {
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <div>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
         </div>
       )}
+      <Footer />
     </div>
   )
 }

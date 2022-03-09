@@ -5,18 +5,15 @@ const optimizedImages = require('next-optimized-images');
 module.exports =
   withPlugins([
     [optimizedImages, {
-      optimizeImagesInDev: true,
-      disableStaticImages: true,
       /* config for next-optimized-images */
-      imagesFolder: 'images',
+      optimizeImagesInDev: true,
       handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
-    }],
+    }], 
     // Global config
     {
       images: {
+        // To fix issue with file paths
         disableStaticImages: true,
-        loader: 'akamai',
-        path: ''
       }
     }
   ]);
