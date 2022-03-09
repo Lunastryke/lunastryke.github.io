@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 export default function Footer({ }) {
     return (
-        <footer className="text-center lg:text-left bg-gray-100 text-gray-600 ">
+        <footer className="text-center lg:text-left bg-gray-100 text-gray-600 justify-end">
             <div className="flex p-3 lg:justify-between border-b border-gray-300 justify-items-center">
                 <div className="flex justify-center items-center w-screen">
-                    <a href="https://www.linkedin.com/in/xuanhao/" target="_blank" className="mr-6 text-gray-600">
+                    <a href="https://www.linkedin.com/in/xuanhao/" target="_blank" className="mr-8 text-gray-600">
                         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in"
                             className="w-6" role="img" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512">
@@ -12,7 +14,7 @@ export default function Footer({ }) {
                             </path>
                         </svg>
                     </a>
-                    <a href="https://github.com/Lunastryke" target="_blank" className="text-gray-600 mr-6">
+                    <a href="https://github.com/Lunastryke" target="_blank" className="text-gray-600 mr-8">
                         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github"
                             className="w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
                             <path fill="currentColor"
@@ -30,10 +32,10 @@ export default function Footer({ }) {
                     </a>
                 </div>
             </div>
-            <div className="mx-6 py-6 text-center md:text-left">
+            <div className="mx-6 py-4 text-center md:text-left">
                 <div className="flex gap-x-40 flex-wrap justify-center">
                     <div className="">
-                        <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                        <h6 className="uppercase font-semibold mb-3 flex justify-center md:justify-start">
                             Discover
                         </h6>
                         {[
@@ -48,21 +50,23 @@ export default function Footer({ }) {
                         ))}
                     </div>
                     <div className="">
-                        <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                        <h6 className="uppercase font-semibold mb-3 flex justify-center md:justify-start">
                             About me
                         </h6>
                         {[
                             ["About", "#!"],
                             ["Projects", "#!"],
-                            ["Resume", "#!"],
+                            ["Resume", "/pdf/resume.pdf"],
                         ].map(([title, url]) => (
                             <p className="mb-2">
-                                <a href={url} className="text-gray-600">{title}</a>
+                                <Link href={url}>
+                                    <a className="text-gray-600">{title}</a>
+                                </Link>
                             </p>
                         ))}
                     </div>
                     <div className="">
-                        <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                        <h6 className="uppercase font-semibold mb-3 flex justify-center md:justify-start">
                             Contact
                         </h6>
                         <p className="flex items-center justify-center md:justify-start mb-4">

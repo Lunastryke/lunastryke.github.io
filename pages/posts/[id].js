@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import CustomHead from '../../components/customhead'
 import Layout from '../../components/layout'
 import Date from '../../components/date'
 
@@ -22,10 +22,8 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ postData }) {
-    return <Layout>
-        <Head>
-            <title>{postData.title}</title>
-        </Head>
+    return (<Layout>
+        <CustomHead title={postData.title}/>
         <article>
             <h1>{postData.title}</h1>
             <div>
@@ -33,5 +31,5 @@ export default function Post({ postData }) {
             </div>
             <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
-    </Layout>
+    </Layout>)
 }
