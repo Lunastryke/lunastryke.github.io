@@ -39,13 +39,13 @@ export default function Footer({ }) {
                             Discover
                         </h6>
                         {[
-                            ["Angular", "#!"],
-                            ["React", "#!"],
-                            ["Vue", "#!"],
-                            ["Laravel", "#!"],
+                            ["Posts", "/posts"],
+                            ["Projects", "/projects"],
                         ].map(([title, url]) => (
                             <p className="mb-2">
-                                <a href={url} className="text-gray-600">{title}</a>
+                                <Link href={url} >
+                                    <a className="text-gray-600">{title}</a>
+                                </Link>
                             </p>
                         ))}
                     </div>
@@ -54,9 +54,8 @@ export default function Footer({ }) {
                             About me
                         </h6>
                         {[
-                            ["About", "#!"],
-                            ["Projects", "#!"],
-                            ["Resume", "/pdf/resume.pdf"],
+                            ["About", "/about"],
+                            ["Contact", "/contact"],
                         ].map(([title, url]) => (
                             <p className="mb-2">
                                 <Link href={url}>
@@ -69,7 +68,7 @@ export default function Footer({ }) {
                         <h6 className="uppercase font-semibold mb-3 flex justify-center md:justify-start">
                             Contact
                         </h6>
-                        <p className="flex items-center justify-center md:justify-start mb-4">
+                        <p className="flex items-center justify-center md:justify-start mb-2">
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home"
                                 className="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                                 <path fill="currentColor"
@@ -78,7 +77,7 @@ export default function Footer({ }) {
                             </svg>
                             Singapore
                         </p>
-                        <p className="flex items-center justify-center md:justify-start mb-4">
+                        <p className="flex items-center justify-center md:justify-start mb-2">
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope"
                                 className="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 512">
@@ -91,8 +90,8 @@ export default function Footer({ }) {
                     </div>
                 </div>
             </div>
-            <div className="text-center p-3 bg-gray-200">
-                <span>Last Updated: <b>March 2022</b></span>
+            <div className="text-center p-2 bg-gray-200">
+                <span>Built with Next.js &amp; TailwindCSS</span>
             </div>
         </footer>
     )
