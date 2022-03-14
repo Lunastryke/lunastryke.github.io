@@ -14,7 +14,7 @@ export default function Navbar({ name }) {
                     ['Posts', '/posts'],
                     ['Projects', '/projects'],
                     ['Contact', '/contact'],
-                    ['Resume', '/pdf/resume.pdf'],
+                    ['Resume', '/resume'],
                 ].map(([title, url]) => (
                     <Link href={url} key={title} >
                         <a className="hover:text-blue-800 mr-6 tracking-wider">{title}</a>

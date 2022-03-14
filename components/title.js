@@ -1,19 +1,21 @@
 import Link from "next/link";
+import MainTitle from "./text-stylings/mainTitle";
+
 export default function Title({ text, sections }) {
     return (
-        <div className="flex flex-col justify-center items-center p-4">
-            <div className="p-4">
-                <span className="font-bold tracking-wide text-6xl uppercase">{text}</span>
-            </div>
+        <div className="flex flex-col justify-center items-center p-2">
+            <MainTitle text={text} />
             {
-                sections ? <div className="flex justify-center items-center">
+                sections ? <div className="flex flex-row justify-center items-center self-center">
                     {sections.map(section => (
-                        <Link href={"#" + section}>
-                            <a className="uppercase font-semibold hover:text-blue-800 mr-6 tracking-wider">{section}</a>
+                        <Link href={"#" + section} key={section}>
+                            <a className=" hover:text-blue-800 mr-6 uppercase font-semibold tracking-wider">
+                                {section}
+                            </a>
                         </Link>
                     ))}
                 </div> :
-                <></>
+                    <></>
             }
         </div>
     )

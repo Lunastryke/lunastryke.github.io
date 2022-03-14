@@ -1,5 +1,6 @@
 import Title from '../components/title'
 import CustomHead from '../components/customhead'
+import Education from '../components/resume/education'
 
 const sections = [
     'Introduction',
@@ -10,20 +11,21 @@ const sections = [
 
 export default function About({ }) {
     return (
-        <div className="flex flex-grow flex-col flex-shrink scroll-smooth divide-y md:w-8/12 justify-start">
+        <div className="flex flex-col flex-grow flex-shrink scroll-smooth divide-y md:w-8/12 justify-center">
             <CustomHead title="About"/>
             <Title text="About" sections={sections}/>
-            <div>
-                <section className="flex" id="introduction">
-                    Here is my intro
+            <div className="flex flex-col flex-grow flex-shrink self-center max-w-2xl">
+                <section     id="Introduction">
+                    Here is my intro asihdkajsdkajsbndkjasndkjsan
+                    ashiofuhaoshfoajsnkcsa
+                    asoihfboinzxocnas dalsk ndsalkndla
+                    asgbioasbgoanxbokmaossa dsaaajknknkzmxnc,zxmnc,zxmnc,zxmnc,zmxncasodnoiwqja
                 </section>
-                <section className="flex" id="education">
-                    Here is my education
-                </section>
-                <section className="flex" id="experience">
+                <Education id="Education"/>
+                <section className="flex" id="Experience">
                     Here is my experience
                 </section>
-                <section className="flex" id="skills">
+                <section className="flex" id="Skills">
                     Here is my skills
                 </section>
             </div>
