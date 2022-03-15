@@ -1,7 +1,7 @@
-export default function SectionTitle({ text }) {
+export default function SectionTitle({ children, size, spacing }) {
     return (
-        <div>
-            <span className="uppercase font-semibold tracking-wider text-lg">{text}</span>
+        <div className={`text-xl ${spacing}`}>
+            <span className={`uppercase ${size} tracking-wider font-semibold`}>{children}</span>
         </div>
     )
 }

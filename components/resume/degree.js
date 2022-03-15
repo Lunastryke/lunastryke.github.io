@@ -2,11 +2,11 @@ import Link from 'next/link'
 
 export default function Degree({ data }) {
     return (
-        <header className='text-left font-light py-2'>
-            <span className="font-normal">{data.degree}</span>
-            <p>
+        <header className='text-left'>
+            <span className="uppercase font-medium tracking-wider">{data.degree}</span>
+            <p className="uppercase font-light tracking-wider">
                 <Link href={data.link}>
-                    <a className="underline-offset-2">{data.school}</a>
+                    <a className="hover:text-blue-800">{data.school}</a>
                 </Link>
                 , {data.year}
             </p>
